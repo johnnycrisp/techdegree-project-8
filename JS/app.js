@@ -1,16 +1,15 @@
-const employeeCard = document.querySelector('.employee-card');
+const employeeCard = document.querySelectorAll('.employee-card');
+let cardHTML;
 
 function fetchData(url){
     return fetch(url)
     .then(response => response.json())
-    .then(data => data.results[0])
     .catch(error => console.log(error));
 }
 
-
 function generateHTML(data) {
 
-    const cardHTML = `
+    cardHTML = `
         <div class="employee-card">
         <img class="employee-img" src="${data.picture.large}" alt="Picture of ${data.name.first} ${data.name.last}">
         <div class="employee-data-container">
@@ -23,11 +22,13 @@ function generateHTML(data) {
     return cardHTML;
 }
 
+fetchData('https://randomuser.me/api/?results=12')
+    .then(data => data.results)
+    .then(data => {
+        for(let i=0; i<data.length; i++){
+            generateHTML(data[i]);
+            employeeCard[i].innerHTML = cardHTML;
+        }
+    });  
 
-fetchData('https://randomuser.me/api/')
-.then(data => generateHTML(data))
-.then(cardHTML => employeeCard.innerHTML = cardHTML);
-// .then(generateHTML)
-// .then(employeeCard.innerHTML = cardHTML);
 
-console.log(fetchData('https://randomuser.me/api/'));
