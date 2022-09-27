@@ -10,14 +10,14 @@ function fetchData(url){
 function generateHTML(data) {
 
     cardHTML = `
-        <div class="employee-card">
+        
         <img class="employee-img" src="${data.picture.large}" alt="Picture of ${data.name.first} ${data.name.last}">
         <div class="employee-data-container">
             <h3>${data.name.first} ${data.name.last}</h3>
             <p>${data.email}</p>
             <p>${data.location.city}</p>
         </div>
-    </div>
+   
     `;
     return cardHTML;
 }

@@ -12,11 +12,87 @@ body {
 }
 
 header {
-    padding-top: 32px;
+padding: 32px 16px 0px 16px;
 }
 
 h1 {
     font-weight: 500;
     font-size: 18px;
     color: rgb(64, 63, 63);
+    text-align: center;
 }
+
+
+.employee-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin: 12px;
+    height: 220px;
+    border: 2px lightgrey solid;
+    border-radius: 6px;
+}
+
+img {
+    border-radius: 50%;
+    height: 110px;
+    width: 110px;
+    padding: 8px;
+}
+
+h3{
+    margin: 4px;
+}
+
+p {
+    margin: 2px;
+    font-size: 14px;
+    color: grey;
+    font-weight: 300;
+}
+
+/* // Media Queries // */
+
+@media screen and (min-width: 768px){
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .employee-card {
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 150px;
+    }
+    .employee-data-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 12px 0 12px;
+
+    }
+
+    h3, p {
+        text-align: left;
+    }
+
+
+@media screen and (min-width: 950px){
+
+ .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+}
+
+
