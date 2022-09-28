@@ -35,7 +35,7 @@ function generateHTML(data) {
 
 let DOB = data.dob.date;
 
-DOB = `${DOB.substring(8,10)}/${DOB.substring(5,7)}/${DOB.substring(1,3)}`;
+DOB = `${DOB.substring(5,7)}/${DOB.substring(8,10)}/${DOB.substring(1,3)}`;
 
         modalHTML = `<div class ="modal-content">
         <img class="employee-img-modal" src="${data.picture.large}" alt="Picture of ${data.name.first} ${data.name.last}">
