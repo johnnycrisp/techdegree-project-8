@@ -70,6 +70,7 @@ p {
 
 .modal-content {
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -77,6 +78,27 @@ p {
     padding: 1rem 1.5rem;
     width: 24rem;
     border-radius: 0.5rem;
+    height: 24rem;
+}
+
+.modal-content h3 {
+
+text-align: center;
+
+
+}
+
+ .modal-content p {
+    text-align: center;
+    margin: 8px;
+
+
+ }
+
+.modal-break {
+border: 2px lightgray solid;
+width: 100%;
+height: 2px;
 }
 
 .close-button {
@@ -86,7 +108,6 @@ p {
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: lightgray;
 }
 
 .close-button:hover {
