@@ -5,7 +5,6 @@ const modalCards = document.querySelectorAll('.employee');
 let cardHTML;
 let modalHTML;
 
-
 cardGrid.addEventListener('click', (e)=>{
     if(e.target.className === 'employee-card')
     {

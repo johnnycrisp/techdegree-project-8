@@ -82,7 +82,7 @@ p {
     padding: 1rem 1.5rem;
     width: 20rem;
     border-radius: 0.5rem;
-    height: 24rem;
+    min-height: 24rem;
 }
 
 .modal-content h3 {
@@ -94,7 +94,7 @@ p {
  .modal-content p {
     text-align: center;
     margin: 8px;
-    font-size: 12px;
+    font-size: 14px;
     color: grey;
     font-weight: 400;
  }
